@@ -3,9 +3,9 @@ import "firebase/auth";
 import "firebase/database";
 import "firebase/storage";
 
+//const url="https://www.gstatic.com/firebasejs/5.9.0/firebase.js">
 
-
-var config = {
+const config = {
     apiKey: "AIzaSyBiOAQ78VO9OY5QsugbyIGTYldi7bSEjoo",
     authDomain: "react-slack-clone-76c14.firebaseapp.com",
     databaseURL: "https://react-slack-clone-76c14.firebaseio.com",
