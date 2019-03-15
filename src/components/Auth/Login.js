@@ -27,7 +27,7 @@ class Login extends React.Component {
   };
 
   handleSubmit = event => {
-    event.preventDefault();
+    //event.preventDefault();
     if (this.isFormValid(this.state)) {
       this.setState({ errors: [], loading: true });
       firebase
@@ -60,8 +60,8 @@ class Login extends React.Component {
     return (
       <Grid textAlign="center" verticalAlign="middle" className="app">
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h1" icon color="violet" textAlign="center">
-            <Icon name="code branch" color="violet" />
+          <Header as="h1" icon color="blue" textAlign="center">
+            <Icon name="coffee" color="blue" />
             Login to Chat
           </Header>
           <Form onSubmit={this.handleSubmit} size="large">
@@ -93,7 +93,7 @@ class Login extends React.Component {
               <Button
                 disabled={loading}
                 className={loading ? "loading" : ""}
-                color="violet"
+                color="blue"
                 fluid
                 size="large"
               >
