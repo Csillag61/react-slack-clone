@@ -4,13 +4,13 @@ import { connect } from "react-redux";
 import { setColors } from "../../actions";
 // prettier-ignore
 import { Sidebar, Menu, Divider, Button, Modal, Icon, Label, Segment } from "semantic-ui-react";
-import { SliderPicker } from "react-color";
+import {CirclePicker } from "react-color";
 
 class ColorPanel extends React.Component {
   state = {
     modal: false,
-    primary: "",
-    secondary: "",
+    primary: "#0066cc",
+    secondary: "#e6ffff",
     user: this.props.currentUser,
     usersRef: firebase.database().ref("users"),
     userColors: []
@@ -103,12 +103,13 @@ class ColorPanel extends React.Component {
         {this.displayUserColors(userColors)}
 
         {/* Color Picker Modal */}
-        <Modal basic open={modal} onClose={this.closeModal}>
+        <Modal className="scrolling" basic open={modal} onClose={this.closeModal}>
           <Modal.Header>Choose App Colors</Modal.Header>
           <Modal.Content>
             <Segment inverted>
               <Label content="Primary Color" />
-              <SliderPicker
+              <CirclePicker
+                className="scrolling"
                 color={primary}
                 onChange={this.handleChangePrimary}
               />
@@ -116,7 +117,8 @@ class ColorPanel extends React.Component {
 
             <Segment inverted>
               <Label content="Secondary Color" />
-              <SliderPicker
+              <CirclePicker
+                className="scrolling"
                 color={secondary}
                 onChange={this.handleChangeSecondary}
               />
