@@ -143,7 +143,7 @@ class UserPanel extends React.Component {
           </Grid.Row>
 
           {/* Change User Avatar Modal   */}
-          <Modal basic open={modal} onClose={this.closeModal}>
+          <Modal className="scrolling" basic open={modal} onClose={this.closeModal}>
             <Modal.Header>Change Avatar</Modal.Header>
             <Modal.Content>
               <Input

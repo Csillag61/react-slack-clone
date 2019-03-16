@@ -138,7 +138,7 @@ body,
   background-image: linear-gradient(
     to left,
     transparent,
-    rgba(255, 255, 255, 0.4),
+    rgba(0, 204, 255),
     transparent
   );
 }

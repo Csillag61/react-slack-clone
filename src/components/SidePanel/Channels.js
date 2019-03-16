@@ -218,7 +218,7 @@ class Channels extends React.Component {
         </Menu.Menu>
 
         {/* Add Channel Modal */}
-        <Modal basic open={modal} onClose={this.closeModal}>
+        <Modal className="scrolling" basic open={modal} onClose={this.closeModal}>
           <Modal.Header>Add a Channel</Modal.Header>
           <Modal.Content>
             <Form onSubmit={this.handleSubmit}>

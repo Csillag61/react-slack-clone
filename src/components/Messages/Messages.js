@@ -266,7 +266,7 @@ class Messages extends React.Component {
 
   displayMessageSkeleton = loading =>
     loading ? (
-      <React.Fragment>
+      <React.Fragment >
         {[...Array(10)].map((_, i) => (
           <Skeleton key={i} />
         ))}
